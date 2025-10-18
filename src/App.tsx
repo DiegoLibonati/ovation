@@ -1,9 +1,7 @@
-import { Main } from "@src/components/Main";
-
-import "@src/App.css";
+import { ReviewsPage } from "@src/pages/ReviewsPage/ReviewsPage";
 
 function App(): JSX.Element {
-  return <Main></Main>;
+  return <ReviewsPage></ReviewsPage>;
 }
 
 export default App;

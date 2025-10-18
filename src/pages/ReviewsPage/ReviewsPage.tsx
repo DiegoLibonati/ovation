@@ -1,6 +1,8 @@
-import { ReviewCard } from "@src/components/ReviewCard";
+import { ReviewCard } from "@src/components/ReviewCard/ReviewCard";
 
-export const Main = (): JSX.Element => {
+import "@src/pages/ReviewsPage/ReviewsPage.css";
+
+export const ReviewsPage = () => {
   return (
     <main className="main-app">
       <section className="reviews-page">

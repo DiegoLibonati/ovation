@@ -1,26 +1,25 @@
 import { screen, render } from "@testing-library/react";
 
-import { Main } from "@src/components/Main";
+import { ReviewsPage } from "@src/pages/ReviewsPage/ReviewsPage";
 
 import { mockReviews } from "@tests/jest.constants";
 
 type RenderComponent = { container: HTMLElement };
 
 const renderComponent = (): RenderComponent => {
-  const { container } = render(<Main />);
+  const { container } = render(<ReviewsPage />);
 
   return {
     container: container,
   };
 };
 
-jest.mock("../constants/data.ts", () => ({
-  get reviews() {
-    return mockReviews;
-  },
-}));
+jest.mock("@src/constants/reviews", () => {
+  const { mockReviews } = jest.requireActual("@tests/jest.constants");
+  return { __esModule: true, default: mockReviews };
+});
 
-describe("Main.tsx", () => {
+describe("ReviewsPage.tsx", () => {
   describe("General Tests.", () => {
     test("You must render the title of the application.", () => {
       renderComponent();

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-import { Review } from "@src/entities/entities";
+import { Review } from "@src/entities/app";
 
 import { handleIndex } from "@src/helpers/handleIndex";
 
-import { reviews as reviewsArray } from "@src/constants/data";
+import reviewsArray from "@src/constants/reviews";
 
-import "@src/components/ReviewCard.css";
+import "@src/components/ReviewCard/ReviewCard.css";
 
 export const ReviewCard = (): JSX.Element => {
   const [reviews] = useState<Review[]>(reviewsArray);
@@ -49,7 +49,10 @@ export const ReviewCard = (): JSX.Element => {
           aria-label="left review"
           className="review__btn-prev"
         >
-          <BsChevronLeft id="left" className="review__btn-prev-icon"></BsChevronLeft>
+          <BsChevronLeft
+            id="left"
+            className="review__btn-prev-icon"
+          ></BsChevronLeft>
         </button>
         <button
           type="button"
@@ -57,7 +60,10 @@ export const ReviewCard = (): JSX.Element => {
           aria-label="right review"
           className="review__btn-next"
         >
-          <BsChevronRight id="right" className="review__btn-next-icon"></BsChevronRight>
+          <BsChevronRight
+            id="right"
+            className="review__btn-next-icon"
+          ></BsChevronRight>
         </button>
       </div>
 

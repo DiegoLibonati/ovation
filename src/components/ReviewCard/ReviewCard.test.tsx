@@ -1,7 +1,7 @@
 import { screen, render } from "@testing-library/react";
 import user from "@testing-library/user-event";
 
-import { ReviewCard } from "@src/components/ReviewCard";
+import { ReviewCard } from "@src/components/ReviewCard/ReviewCard";
 
 import { mockReviews } from "@tests/jest.constants";
 
@@ -15,11 +15,10 @@ const renderComponent = (): RenderComponent => {
   };
 };
 
-jest.mock("../constants/data.ts", () => ({
-  get reviews() {
-    return mockReviews;
-  },
-}));
+jest.mock("@src/constants/reviews", () => {
+  const { mockReviews } = jest.requireActual("@tests/jest.constants");
+  return { __esModule: true, default: mockReviews };
+});
 
 describe("ReviewCard.tsx", () => {
   describe("General Tests.", () => {

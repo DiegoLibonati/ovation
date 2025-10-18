@@ -1,5 +1,3 @@
-// ##### TYPES #####
-
 export type Review = {
   id: number;
   name: string;

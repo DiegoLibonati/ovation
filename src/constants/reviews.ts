@@ -1,6 +1,6 @@
 import { Review } from "@src/entities/entities";
 
-export const reviews: Review[] = [
+const reviews: Review[] = [
   {
     id: 1,
     name: "susan smith",
@@ -34,3 +34,5 @@ export const reviews: Review[] = [
     text: "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+export default reviews;
