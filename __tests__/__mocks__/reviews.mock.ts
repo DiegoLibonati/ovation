@@ -1,4 +1,6 @@
-export const mockReviews = [
+import { Review } from "@/types/app";
+
+export const mockReviews: Review[] = [
   {
     id: 1,
     name: "susan smith",
@@ -21,3 +23,6 @@ export const mockReviews = [
     text: "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
   },
 ];
+
+export const mockReview: Review = mockReviews[0]!;
+export const mockReview2: Review = mockReviews[1]!;
