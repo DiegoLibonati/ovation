@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-import { Review } from "@src/entities/app";
+import { Review } from "@/types/app";
 
-import { handleIndex } from "@src/helpers/handleIndex";
+import { handleIndex } from "@/helpers/handleIndex";
 
-import reviewsArray from "@src/constants/reviews";
+import reviewsArray from "@/constants/reviews";
 
-import "@src/components/ReviewCard/ReviewCard.css";
+import "@/components/ReviewCard/ReviewCard.css";
 
-export const ReviewCard = (): JSX.Element => {
+const ReviewCard = () => {
   const [reviews] = useState<Review[]>(reviewsArray);
   const [index, setIndex] = useState<number>(0);
 
@@ -27,20 +27,18 @@ export const ReviewCard = (): JSX.Element => {
     return setIndex(handleIndex(new_index, reviews.length));
   };
 
-  const handleSurpriseButton: React.MouseEventHandler<
-    HTMLButtonElement
-  > = () => {
+  const handleSurpriseButton: React.MouseEventHandler<HTMLButtonElement> = () => {
     return setIndex(Math.floor(Math.random() * reviews.length));
   };
 
   return (
     <div className="review">
-      <img className="review__img" src={review.image} alt={review.text}></img>
+      <img className="review__img" src={review?.image} alt={review?.text}></img>
 
-      <h2 className="review__name">{review.name.toUpperCase()}</h2>
-      <p className="review__range">{review.job.toUpperCase()}</p>
+      <h2 className="review__name">{review?.name.toUpperCase()}</h2>
+      <p className="review__range">{review?.job.toUpperCase()}</p>
 
-      <p className="review__description">{review.text}</p>
+      <p className="review__description">{review?.text}</p>
 
       <div className="review__btns">
         <button
@@ -49,10 +47,7 @@ export const ReviewCard = (): JSX.Element => {
           aria-label="left review"
           className="review__btn-prev"
         >
-          <BsChevronLeft
-            id="left"
-            className="review__btn-prev-icon"
-          ></BsChevronLeft>
+          <BsChevronLeft id="left" className="review__btn-prev-icon"></BsChevronLeft>
         </button>
         <button
           type="button"
@@ -60,10 +55,7 @@ export const ReviewCard = (): JSX.Element => {
           aria-label="right review"
           className="review__btn-next"
         >
-          <BsChevronRight
-            id="right"
-            className="review__btn-next-icon"
-          ></BsChevronRight>
+          <BsChevronRight id="right" className="review__btn-next-icon"></BsChevronRight>
         </button>
       </div>
 
@@ -77,3 +69,5 @@ export const ReviewCard = (): JSX.Element => {
     </div>
   );
 };
+
+export default ReviewCard;

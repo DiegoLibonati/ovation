@@ -1,6 +1,6 @@
-import { ReviewsPage } from "@src/pages/ReviewsPage/ReviewsPage";
+import ReviewsPage from "@/pages/ReviewsPage/ReviewsPage";
 
-function App(): JSX.Element {
+function App() {
   return <ReviewsPage></ReviewsPage>;
 }
 

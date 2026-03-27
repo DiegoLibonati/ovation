@@ -5,9 +5,9 @@
   flex-flow: column wrap;
   width: 90%;
   height: 55rem;
-  box-shadow: 0 0.4rem 0.8rem 0 rgba(var(--black-int-color), 0.2);
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(var(--color-black-rgb), 0.2);
   padding: 1rem;
-  background-color: var(--white-color);
+  background-color: var(--color-white);
   border-radius: 2rem;
   position: absolute;
 }
@@ -17,7 +17,7 @@
   width: 15rem;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0.3rem -0.3rem 0rem 0rem var(--primary-color);
+  box-shadow: 0.3rem -0.3rem 0rem 0rem var(--color-primary);
 }
 
 .review__name {
@@ -27,7 +27,7 @@
 
 .review__range {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 .review__description {
@@ -54,7 +54,7 @@
 .review__btn-prev-icon,
 .review__btn-next-icon {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--color-primary);
   cursor: pointer;
 }
 
@@ -64,8 +64,8 @@
   border-radius: 1rem;
   font-size: 1.5rem;
   background: none;
-  border: 0.2rem solid var(--primary-color);
-  color: var(--primary-color);
+  border: 0.2rem solid var(--color-primary);
+  color: var(--color-primary);
   cursor: pointer;
 }
 

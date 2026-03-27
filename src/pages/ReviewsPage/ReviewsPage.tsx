@@ -1,8 +1,8 @@
-import { ReviewCard } from "@src/components/ReviewCard/ReviewCard";
+import ReviewCard from "@/components/ReviewCard/ReviewCard";
 
-import "@src/pages/ReviewsPage/ReviewsPage.css";
+import "@/pages/ReviewsPage/ReviewsPage.css";
 
-export const ReviewsPage = () => {
+const ReviewsPage = () => {
   return (
     <main className="main-app">
       <section className="reviews-page">
@@ -18,3 +18,5 @@ export const ReviewsPage = () => {
     </main>
   );
 };
+
+export default ReviewsPage;
