@@ -25,7 +25,7 @@ describe("ReviewsPage", () => {
 
   it("should render the separator element", () => {
     const { container } = renderPage();
-    expect(container.querySelector<HTMLElement>(".reviews-page__separator")).toBeInTheDocument();
+    expect(container.querySelector<HTMLDivElement>(".reviews-page__separator")).toBeInTheDocument();
   });
 
   it("should render the ReviewCard component", () => {
