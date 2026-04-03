@@ -2,12 +2,18 @@ import { render, screen } from "@testing-library/react";
 
 import ReviewsPage from "@/pages/ReviewsPage/ReviewsPage";
 
-const renderPage = () => {
+type RenderPage = { container: HTMLElement };
+
+const renderPage = (): RenderPage => {
   const { container } = render(<ReviewsPage />);
   return { container };
 };
 
 describe("ReviewsPage", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render the main element", () => {
     const { container } = renderPage();
     expect(container.querySelector<HTMLElement>("main.main-app")).toBeInTheDocument();

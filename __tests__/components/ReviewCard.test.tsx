@@ -5,12 +5,18 @@ import ReviewCard from "@/components/ReviewCard/ReviewCard";
 
 import { mockReviews, mockReview, mockReview2 } from "@tests/__mocks__/reviews.mock";
 
-const renderComponent = () => {
+type RenderComponent = { container: HTMLElement };
+
+const renderComponent = (): RenderComponent => {
   const { container } = render(<ReviewCard />);
   return { container };
 };
 
 describe("ReviewCard", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should render the first review image with accessible alt text", () => {
     renderComponent();
     expect(screen.getByRole("img")).toHaveAttribute("alt", `Photo of ${mockReview.name}`);
