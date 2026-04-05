@@ -2,7 +2,9 @@ import { render, screen } from "@testing-library/react";
 
 import ReviewsPage from "@/pages/ReviewsPage/ReviewsPage";
 
-type RenderPage = { container: HTMLElement };
+interface RenderPage {
+  container: HTMLElement;
+}
 
 const renderPage = (): RenderPage => {
   const { container } = render(<ReviewsPage />);

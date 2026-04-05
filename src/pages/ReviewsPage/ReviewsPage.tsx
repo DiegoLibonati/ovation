@@ -1,8 +1,10 @@
+import type { JSX } from "react";
+
 import ReviewCard from "@/components/ReviewCard/ReviewCard";
 
 import "@/pages/ReviewsPage/ReviewsPage.css";
 
-const ReviewsPage = () => {
+const ReviewsPage = (): JSX.Element => {
   return (
     <main className="main-app">
       <section className="reviews-page">

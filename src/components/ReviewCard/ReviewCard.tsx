@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-import { Review } from "@/types/app";
+import type { JSX } from "react";
 
 import { handleIndex } from "@/helpers/handleIndex";
 
@@ -9,26 +9,26 @@ import reviewsArray from "@/constants/reviews";
 
 import "@/components/ReviewCard/ReviewCard.css";
 
-const ReviewCard = () => {
-  const [reviews] = useState<Review[]>(reviewsArray);
-  const [index, setIndex] = useState<number>(0);
+const ReviewCard = (): JSX.Element => {
+  const [reviews] = useState(reviewsArray);
+  const [index, setIndex] = useState(0);
 
   const review = reviews[index];
 
   const handlePrevClick: React.MouseEventHandler<HTMLButtonElement> = () => {
     const new_index: number = index - 1;
 
-    return setIndex(handleIndex(new_index, reviews.length));
+    setIndex(handleIndex(new_index, reviews.length));
   };
 
   const handleNextClick: React.MouseEventHandler<HTMLButtonElement> = () => {
     const new_index: number = index + 1;
 
-    return setIndex(handleIndex(new_index, reviews.length));
+    setIndex(handleIndex(new_index, reviews.length));
   };
 
   const handleSurpriseButton: React.MouseEventHandler<HTMLButtonElement> = () => {
-    return setIndex(Math.floor(Math.random() * reviews.length));
+    setIndex(Math.floor(Math.random() * reviews.length));
   };
 
   return (
@@ -42,7 +42,9 @@ const ReviewCard = () => {
 
       <div className="review__btns">
         <button
-          onClick={(e) => handlePrevClick(e)}
+          onClick={(e) => {
+            handlePrevClick(e);
+          }}
           type="button"
           aria-label="Previous review"
           className="review__btn-prev"
@@ -51,7 +53,9 @@ const ReviewCard = () => {
         </button>
         <button
           type="button"
-          onClick={(e) => handleNextClick(e)}
+          onClick={(e) => {
+            handleNextClick(e);
+          }}
           aria-label="Next review"
           className="review__btn-next"
         >
@@ -61,7 +65,9 @@ const ReviewCard = () => {
 
       <button
         className="review__btn-surprise"
-        onClick={(e) => handleSurpriseButton(e)}
+        onClick={(e) => {
+          handleSurpriseButton(e);
+        }}
         aria-label="Show a random review"
       >
         Surprise Me

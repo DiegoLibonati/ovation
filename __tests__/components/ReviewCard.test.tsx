@@ -5,7 +5,9 @@ import ReviewCard from "@/components/ReviewCard/ReviewCard";
 
 import { mockReviews, mockReview, mockReview2 } from "@tests/__mocks__/reviews.mock";
 
-type RenderComponent = { container: HTMLElement };
+interface RenderComponent {
+  container: HTMLElement;
+}
 
 const renderComponent = (): RenderComponent => {
   const { container } = render(<ReviewCard />);
@@ -80,7 +82,7 @@ describe("ReviewCard", () => {
     const user = userEvent.setup();
     renderComponent();
 
-    for (let i = 0; i < mockReviews.length; i++) {
+    for (const _mR of mockReviews) {
       await user.click(screen.getByRole("button", { name: "Next review" }));
     }
 
