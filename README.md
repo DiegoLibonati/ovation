@@ -25,7 +25,7 @@ The application is built as a lightweight, dependency-free carousel — no exter
 
 The UI is fully static: review data is hardcoded in a typed constants file (`src/constants/reviews.ts`) using a `Review` type defined in `src/types/app.ts`. This makes the data structure explicit and easy to extend with new entries.
 
-The project is covered by a Jest test suite that tests the core navigation logic (`handleIndex`), the `ReviewCard` component interactions, and the `ReviewsPage` rendering — enforcing a minimum 70% coverage threshold across branches, functions, lines, and statements.
+The project is covered by a Jest test suite that tests the core navigation logic (`handleIndex`), the `ReviewCard` component interactions, and the `OvationPage` rendering — enforcing a minimum 70% coverage threshold across branches, functions, lines, and statements.
 
 ## Technologies used
 
