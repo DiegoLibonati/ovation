@@ -1,7 +1,7 @@
 {
-  "name": "Reviews App Page",
-  "short_name": "Reviews",
-  "description": "I made a web application that allows you to see different reviews, this web application allowed me to learn how to make this kind of reviews/slides with next, prev and with a `Surprise Me` button that basically looks for a random review to show. In this case you see an image, the name, the role and a brief description.",
+  "name": "Ovation",
+  "short_name": "Ovation",
+  "description": "Ovation is a single-page web application that displays a testimonials carousel, allowing users to browse through a collection of reviews one at a time. Each review card shows the reviewer's photo, full name, professional role, and a written testimonial.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

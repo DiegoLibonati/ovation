@@ -1,4 +1,4 @@
-# Reviews React
+# Ovation
 
 ## Educational Purpose
 
@@ -17,7 +17,15 @@ The application will open automatically at `http://localhost:3000`
 
 ## Description
 
-I made a web application that allows you to see different reviews, this web application allowed me to learn how to make this kind of reviews/slides with next, prev and with a `Surprise Me` button that basically looks for a random review to show. In this case you see an image, the name, the role and a brief description.
+**Ovation** is a single-page web application that displays a testimonials carousel, allowing users to browse through a collection of reviews one at a time. Each review card shows the reviewer's photo, full name, professional role, and a written testimonial.
+
+Users can navigate the carousel in three ways: the **Previous** and **Next** buttons step through reviews sequentially, wrapping around at both ends so the experience is always continuous. The **Surprise Me** button picks a random review from the collection and jumps directly to it, offering a quick way to discover testimonials without clicking through them in order.
+
+The application is built as a lightweight, dependency-free carousel — no external carousel library is used. Navigation state is managed locally inside the `ReviewCard` component using React's `useState` hook, and index boundary logic is handled by a pure utility function that ensures the index always stays within the valid range of the reviews array.
+
+The UI is fully static: review data is hardcoded in a typed constants file (`src/constants/reviews.ts`) using a `Review` type defined in `src/types/app.ts`. This makes the data structure explicit and easy to extend with new entries.
+
+The project is covered by a Jest test suite that tests the core navigation logic (`handleIndex`), the `ReviewCard` component interactions, and the `ReviewsPage` rendering — enforcing a minimum 70% coverage threshold across branches, functions, lines, and statements.
 
 ## Technologies used
 
@@ -68,11 +76,7 @@ I made a web application that allows you to see different reviews, this web appl
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/Reviews-React`](https://www.diegolibonati.com.ar/#/project/Reviews-React)
-
-## Video
-
-https://user-images.githubusercontent.com/99032604/198900166-c35c7979-9859-4537-ae7f-3af2bd0bc712.mp4
+[`https://www.diegolibonati.com.ar/#/project/ovation`](https://www.diegolibonati.com.ar/#/project/ovation)
 
 ## Testing
 

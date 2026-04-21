@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.reviews-page {
+.ovation-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
   height: 40.625rem;
 }
 
-.reviews-page__header {
+.ovation-page__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,12 +24,12 @@
   height: 6.25rem;
 }
 
-.reviews-page__title {
+.ovation-page__title {
   font-size: 2.5rem;
   text-align: center;
 }
 
-.reviews-page__separator {
+.ovation-page__separator {
   width: 6.25rem;
   height: 0.3125rem;
   background-color: var(--color-primary);
