@@ -1,7 +1,7 @@
 {
   "name": "Ovation",
   "short_name": "Ovation",
-  "description": "Ovation is a single-page web application that displays a testimonials carousel, allowing users to browse through a collection of reviews one at a time. Each review card shows the reviewer's photo, full name, professional role, and a written testimonial.",
+  "description": "Ovation is a single-page web application that displays a testimonials carousel, allowing users to browse through a collection of reviews one at a time.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
